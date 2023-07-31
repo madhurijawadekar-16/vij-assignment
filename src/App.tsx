@@ -115,7 +115,7 @@ function App() {
 					<h1 className='f-bold'>
 						<div className='f-primary-main'>We are Extensive.</div>
 					</h1>
-					<h3 className='f-primary-main f-400'>
+					<h3 className='f-primary-main f-400 mt-sm'>
 						<div>Helping you stand out in a crowded market</div>
 					</h3>
 				</div>
@@ -132,25 +132,25 @@ function App() {
 						<div className='f-primary-main'>We are</div>
 						<div className='f-secondary-dark'>Extensive.</div>
 					</h1>
-					<h3 className='f-primary-main f-400'>
+					<h3 className='f-primary-main f-400 mt-sm'>
 						<div>Helping you stand out in a </div>
 						<div>crowded market</div>
 					</h3>
 				</div>
 			</div>
-			<Box className='page-section mt-md' sx={{ flexGrow: 1 }}>
+			<Box className='page-section mt-lg mb-md' sx={{ flexGrow: 1 }}>
 				<Grid container spacing={2}>
 					<Grid item xs={12}>
 						<h5 className='f-400 f-uppercase f-primary'>who are we</h5>
 						<h1 className='f-bold f-normal f-bg-main-dark mt-sm'>
 							We are Extensive.
 						</h1>
-						<p className='f-normal-text-color mt-xs'>
+						<p className='f-normal-text-color mt-sm'>
 							Amet minim mollit non deserunt ullamco est sit aliqua dolor do
 							amet sint. Velit officia consequat duis enim velit mollit.
 							Exercitation veniam consequat sunt nostrud amet.
 						</p>
-						<div className='mt-sm align-item'>
+						<div className='mt-md align-item'>
 							<button className='btn-sm bg-primary-main f-pure-white f-uppercase h6 f-spaced-md'>
 								BOOK A FREE MARKETING AUDIT
 							</button>
@@ -158,14 +158,14 @@ function App() {
 					</Grid>
 				</Grid>
 			</Box>
-			<Box className='mt-md show-for-small-only' sx={{ flexGrow: 1 }}>
+			<Box className='mt-lg show-for-small-only' sx={{ flexGrow: 1 }}>
 				<Grid container>
 					<Grid item xs={12}>
 						<div className='our-work-section-sm bg-primary-lighter'>
-							<h3 className='f-uppercase f-bold f-primary-main'>
+							<h1 className='f-uppercase f-bold f-primary-main'>
 								<div>WHAT </div>
 								<div>WE DO.</div>
-							</h3>
+							</h1>
 							<p className='f-primary-darker mt-xs'>
 								We do lots of stuffs , basically adding value to your product .
 							</p>
@@ -173,32 +173,32 @@ function App() {
 					</Grid>
 				</Grid>
 			</Box>
-			<Box className='mt-md mb-md hide-for-small-only' sx={{ flexGrow: 1 }}>
+			<Box className='mt-lg mb-md hide-for-small-only' sx={{ flexGrow: 1 }}>
 				<Grid container spacing={2} columns={16}>
-					<Grid item xs={8}>
+					<Grid item xs={10}>
 						<div className='our-work-section bg-primary-lighter'>
 							{/* <img src="/images/ellipse.png" alt='ellipse' /> */}
-							<h3 className='f-uppercase f-bold f-primary-main'>
+							<h1 className='f-uppercase f-bold f-primary-main'>
 								<div>WHAT </div>
 								<div>WE DO.</div>
-							</h3>
+							</h1>
 							<p className='f-primary-darker mt-xs'>
 								We do lots of stuffs , basically adding value to your product .
 							</p>
 						</div>
 					</Grid>
-					<Grid item xs={8} className='item-list'>
+					<Grid item xs={6} className='item-list'>
 						{whatWeDoList.map((value) => {
 							return (
-								<h4
-									className='mt-sm f-primary-main f-capitalize'
+								<h3
+									className='mt-md f-primary-main f-capitalize'
 									key={value.id}
 								>
 									{value.val}
-								</h4>
+								</h3>
 							)
 						})}
-						<div className='mt-xs'>
+						<div className='mt-sm'>
 							<button className='btn-sm bg-primary-main f-pure-white f-uppercase h6 f-spaced-md br-sm'>
 								view all
 							</button>
@@ -231,7 +231,7 @@ function App() {
 				</Grid>
 			</Box>
 			<div className='bg-primary-main'>
-				<Box className='page-section mt-sm' sx={{ flexGrow: 1 }}>
+				<Box className='page-section mt-lg' sx={{ flexGrow: 1 }}>
 					<h2 className='f-pure-white f-uppercase f-500'>
 						<div>our</div>
 						<div>work</div>
@@ -242,7 +242,7 @@ function App() {
 						</button>
 					</div>
 					<div className='hide-for-small-only'>
-						<ImageList variant='masonry' className='mt-sm' cols={2} gap={10}>
+						<ImageList variant='masonry' className='mt-md' cols={2} gap={40}>
 							{itemData.slice(0, 2).map((item) => (
 								<ImageListItem key={item.img}>
 									<img
@@ -265,7 +265,7 @@ function App() {
 								</ImageListItem>
 							))}
 						</ImageList>
-						<ImageList variant='masonry' cols={2} gap={6}>
+						<ImageList variant='masonry' cols={2} gap={40}>
 							{itemData.slice(2, itemData.length).map((item) => (
 								<ImageListItem key={item.img}>
 									<img
@@ -314,7 +314,7 @@ function App() {
 					</div>
 				</Box>
 			</div>
-			<div className='page-section mt-md'>
+			<div className='page-section mt-lg mb-md'>
 				<h2 className='f-primary-main f-uppercase f-bold'>
 					<div>our</div>
 					<div>partners.</div>
@@ -322,7 +322,7 @@ function App() {
 				<h4 className='mt-xs f-secondary-main f-normal'>
 					Your success is our success
 				</h4>
-				<Box sx={{ flexGrow: 1 }} className='mt-md'>
+				<Box sx={{ flexGrow: 1 }} className='mt-xs'>
 					<ImageList cols={5} gap={20}>
 						{partnerData.map((item, index) => (
 							<ImageListItem key={index}>
@@ -332,14 +332,14 @@ function App() {
 									className='logo-img'
 									loading='lazy'
 								/>
-								<ImageListItemBar title={item.title} position='below' />
+								<h5 className='ta-c mt-sm'>{item.title}</h5>
 							</ImageListItem>
 						))}
 					</ImageList>
 				</Box>
 			</div>
 			<div className='bg-primary-main'>
-				<div className='page-section mt-md mb-md'>
+				<div className='page-section mt-lg mb-md'>
 					<h2 className='f-primary-light f-normal f-bold'>
 						<span>Looking to drive</span>
 						<div>
