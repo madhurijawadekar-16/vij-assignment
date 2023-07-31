@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
 				<ListItemText primary='Contact us' />
 			</ListItem>
 			<ListItem onClick={handleDrawerClose} className='f-500 h5 f-primary'>
-				<Button className='f-uppercase f-500 h6 btn-md bg-secondary-main f-pure-white f-spaced-md'>
+				<Button className='f-uppercase f-500 f-base btn-md bg-secondary-main f-pure-white f-spaced-md'>
 					Book an free marketing audit
 				</Button>
 			</ListItem>
@@ -58,10 +58,16 @@ const Navbar: React.FC = () => {
 					<Typography variant='h6' style={{ flexGrow: 1 }}>
 						<div className='header-rectangle bg-primary-main'></div>
 					</Typography>
-					<Button className='f-capitalize f-400 h5 f-primary' color='inherit'>
+					<Button
+						className='f-capitalize f-400 h5 f-primary btn-navbar'
+						color='inherit'
+					>
 						Contact
 					</Button>
-					<Button className='f-capitalize f-400 h5 f-primary' color='inherit'>
+					<Button
+						className='f-capitalize f-400 h5 f-primary btn-navbar'
+						color='inherit'
+					>
 						Work
 					</Button>
 					<IconButton

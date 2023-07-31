@@ -5,6 +5,10 @@ import Grid from '@mui/material/Grid'
 import ImageList from '@mui/material/ImageList'
 import ImageListItem from '@mui/material/ImageListItem'
 import ImageListItemBar from '@mui/material/ImageListItemBar'
+import Slider from 'react-slick'
+
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 function App() {
 	const whatWeDoList = [
 		{
@@ -55,6 +59,16 @@ function App() {
 			description: 'Our ad campaign brought 80% footfall to the company',
 		},
 	]
+
+	var settings = {
+		dots: true,
+		infinite: true,
+		speed: 500,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		className: 'theClass',
+		arrows: false,
+	}
 	// img section
 	const partnerData = [
 		{
@@ -108,6 +122,7 @@ function App() {
 			title: 'vue',
 		},
 	]
+
 	return (
 		<div className='home'>
 			<div className='home-hero-section'>
@@ -337,6 +352,75 @@ function App() {
 						))}
 					</ImageList>
 				</Box>
+			</div>
+			<div className='page-section mt-lg mb-md'>
+				<h3 className='f-primary-main f-500'>Testimonials</h3>
+				<section>
+					<div
+						id='slider-container'
+						className='max-w-lg mx-auto
+      mt-md'
+					>
+						<Slider {...settings}>
+							<article style={{ display: 'grid !important' }}>
+								<Grid container spacing={2} columns={16}>
+									<Grid item xs={4}>
+										<img
+											className='img-testimonial'
+											src='/images/testimonial.png'
+											alt='testimonial'
+										/>
+									</Grid>
+									<Grid item xs={12}>
+										<div className='f-primary-main h3'>
+											“Working with Extensive is great”
+										</div>
+										<div className='mt-lg grid-x align-right align-middle'>
+											<div className='cell small-4 mr-sm'>
+												<div className='line'></div>
+											</div>
+											<div className='cell small-6'>
+												<h4 className='f-primary-main h4'>John Doe</h4>
+												<h6 className='f-secondary-main'>
+													<div>Head of director</div>
+													<div>GGPL PVT LTD.</div>
+												</h6>
+											</div>
+										</div>
+									</Grid>
+								</Grid>
+							</article>
+							<article style={{ display: 'grid !important' }}>
+								<Grid container spacing={2} columns={16}>
+									<Grid item xs={4}>
+										<img
+											className='img-testimonial'
+											src='/images/testimonial.png'
+											alt='testimonial'
+										/>
+									</Grid>
+									<Grid item xs={12}>
+										<div className='f-primary-main h3'>
+											“Working with Extensive is great”
+										</div>
+										<div className='mt-lg grid-x align-right align-middle'>
+											<div className='cell small-4 mr-sm'>
+												<div className='line'></div>
+											</div>
+											<div className='cell small-6'>
+												<h4 className='f-primary-main h4'>John Doe</h4>
+												<h6 className='f-secondary-main'>
+													<div>Head of director</div>
+													<div>GGPL PVT LTD.</div>
+												</h6>
+											</div>
+										</div>
+									</Grid>
+								</Grid>
+							</article>
+						</Slider>
+					</div>
+				</section>
 			</div>
 			<div className='bg-primary-main'>
 				<div className='page-section mt-lg mb-md'>
